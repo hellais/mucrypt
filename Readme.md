@@ -1,5 +1,4 @@
-# GreenHouse (MUCrypt)
+mucrypt
+=======
 
-https://whispersystems.org/blog/simplifying-otr-deniability/
-
-
+multi-party group encrypted chat and bullshit

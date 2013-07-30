@@ -52,3 +52,14 @@ class Identity(DiffieHellman):
         self.protocol = identity['protocol']
         self.public_key = identity['public_key']
 
+class EphemeralIdentity(Identity):
+    def generatePayload(self):
+        payload = {'ephemeral_public_key': self.public_key,
+        }
+        return json.dumps(payload)
+
+
+class State(object):
+    pass
+
+

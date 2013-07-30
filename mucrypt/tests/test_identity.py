@@ -31,6 +31,5 @@ class TestIdentity(TestCase):
 
         self.assertTrue(before_private_key == after_private_key)
 
-
 if __name__ == '__main__':
     main()
