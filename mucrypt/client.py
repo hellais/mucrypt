@@ -117,7 +117,10 @@ class MUCrypt(MUCClient):
 
     def processMessage(self, mu_message):
         # mu_message
-        pass
+        if self.session.state == 'negotiating':
+            pass
+        if 'public_key' in mu_message:
+            pass
 
     def receivedGroupChat(self, room, user, message):
         """
@@ -147,6 +150,7 @@ class MUCrypt(MUCClient):
         payload += "\n\r\n\r"
         payload += "%s" % json.dumps(data)
         payload += "--END-MUCRYPT--"
+        self.groupChat(self.roomJID, payload)
 
 # Set up the Twisted application
 
